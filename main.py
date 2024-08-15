@@ -1,3 +1,5 @@
+# Template: https://brittanychiang.com/
+
 from fasthtml import common as fh
 
 css = [fh.Link(rel='stylesheet', href='style.css', type='text/css')]
@@ -17,10 +19,12 @@ github = fh.A(fh.I(cls='bi bi-github'),href='')
 twitter = fh.A(fh.I(cls='bi bi-twitter'),href='')
 
 # Languages and Technologies
+# TODO: Turn into components that will allow for 'New' tags to be added
 html = fh.Div('HTML', cls='tag row')
 css = fh.Div('CSS', cls='tag row')
 python = fh.Div('Python', cls='tag row')
-htmx = fh.Div('HTMX', cls='tag new row')
+htmx = fh.Div('HTMX', cls='tag tool row')
+django = fh.Div('Django', cls='tag tool row')
 
 @rt('/')
 def get(): return fh.Html(*all_headers, 
@@ -65,12 +69,13 @@ def get(): return fh.Html(*all_headers,
                                         fh.Div(
                                             fh.Div(
                                                 fh.H3('Project 1'),
-                                                fh.Div(html,css,python,htmx, cls='column'),
+                                                fh.Div(html,css,python,htmx,django, cls='column'),
                                                 fh.P('This is a description of the project',cls='project-description'),
                                                 cls='project'
                                             ),
                                             fh.Div(
                                                 fh.H3('Project 2'),
+                                                fh.Div(python,htmx, cls='column'),
                                                 fh.P('This is a description of the project',cls='project-description'),
                                                 cls='project'
                                             ),
