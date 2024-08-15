@@ -11,10 +11,16 @@ h2 = fh.H2('Software Engineer, Founder, Artist',cls='title')
 sub_title = fh.P('I am a software engineer with a passion for solving interesting problems with innovative solutions.',cls='description')
 nav = {'About Me':'#','Experience':'#','Projects':'#','Contact':'#'}
 
-#Socials
+# Socials
 linkedin = fh.A(fh.I(cls='bi bi-linkedin'),href='')
 github = fh.A(fh.I(cls='bi bi-github'),href='')
 twitter = fh.A(fh.I(cls='bi bi-twitter'),href='')
+
+# Languages and Technologies
+html = fh.Div('HTML', cls='tag row')
+css = fh.Div('CSS', cls='tag row')
+python = fh.Div('Python', cls='tag row')
+htmx = fh.Div('HTMX', cls='tag new row')
 
 @rt('/')
 def get(): return fh.Html(*all_headers, 
@@ -59,6 +65,7 @@ def get(): return fh.Html(*all_headers,
                                         fh.Div(
                                             fh.Div(
                                                 fh.H3('Project 1'),
+                                                fh.Div(html,css,python,htmx, cls='column'),
                                                 fh.P('This is a description of the project',cls='project-description'),
                                                 cls='project'
                                             ),
