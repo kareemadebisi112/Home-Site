@@ -1,0 +1,9 @@
+@media (max-width: 800px) {
+    .column {
+        flex-direction: column;
+    }
+    .name-section{
+        position: relative;
+        top: 0;
+    }
+}
