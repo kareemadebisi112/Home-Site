@@ -1,9 +1,17 @@
-@media (max-width: 800px) {
+@media screen and (min-width: 1200px) and (max-width: 1600px) {
+}
+
+/* Mobile :480px. */
+@media screen and (max-width: 950px) {
     .column {
         flex-direction: column;
     }
     .main-container {
         gap: var(--gap-xxxl);
+        margin: 0 var(--gap-xxl);
+    }
+    .main-section {
+        margin-right: 0;
     }
     .tag-container, .social-container{
         flex-direction: row;

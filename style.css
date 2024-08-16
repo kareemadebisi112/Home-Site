@@ -35,7 +35,8 @@ p {
 }
 
 h1 {
-    font-size: 32px;
+    font-size: 36px;
+    font-weight: 700;
     margin-bottom: var(--gap-lg);
     transition: var(--transition-time);
 }
