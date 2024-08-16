@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Golos+Text:wght@400..900&display=swap');
 
-:root{
+:root {
+    scroll-behavior: smooth;
     --primary-font: 'Archivo', sans-serif;
     --font-color: #E2E8F0;
+    --main-color: #5DE4A9;
     --background-color: #1B1E28;
-    background-color: #1B1E28;
-
-    /* Spacing */
+    --transition-time: 0.4s;
+    background-color: var(--background-color);
     --gap-xs: 0.128rem;
     --gap-sm: 0.272rem;
     --gap-md: 0.618rem;
@@ -15,82 +16,185 @@
     --gap-xxl: 2.618rem;
     --gap-xxxl: 4.236rem;
     --gap-xxxxl: 6.854rem;
-
-    h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, input, button{
-        font-family: var(--primary-font);
-        color: var(--font-color);
-    }
-    a{
-        text-decoration: none;
-    }
-    p{
-        line-height: var(--gap-xl);
-        filter: brightness(0.7);
-    }
-    h1{
-        font-size: 38px;
-    }
-
-
 }
 
-.column{
+h1, h2, h3, h4, h5, h6, p, a, span, div, li, ul, ol, input, button {
+    font-family: var(--primary-font);
+    color: var(--font-color);
+}
+
+a {
+    text-decoration: none;
+    transition: var(--transition-time);
+}
+
+p {
+    line-height: var(--gap-xl);
+    filter: brightness(0.7);
+    margin: var(--gap-sm) 0;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: var(--gap-lg);
+    transition: var(--transition-time);
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: var(--gap-lg);
+}
+
+h3 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: var(--gap-md);
+    margin-top: 0;
+    transition: var(--transition-time);
+}
+
+h4 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 0;
+    margin: var(--gap-xs) 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    margin: var(--gap-lg) 0;
+}
+
+a:hover {
+    color: var(--main-color);
+}
+
+.main-container {
+    margin: 0 150px;
+    margin-top: -8px;
+}
+
+.column {
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
     gap: 10px;
 }
-.stack{
+
+.stack {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: start;
 }
 
-/* .row{
-    border: 2px solid red;
-    margin-bottom: var(--gap-xxl);
-} */
-.name-section{
-    align-self: start;
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    margin-left: 150px;
-    /* border: 2px solid red; */
+h1:hover {
+    color: #5DE4A9;
 }
 
-.main-section{
+.name-section {
+    align-self: flex-start;
+    justify-content: space-between;
+    margin-bottom: var(--gap-xxl);
+    position: sticky;
+    overflow-y: hidden;
+    top: 0;
+    height: 95vh;
+    margin: 0 var(--gap-xxl);
+    width: auto;
+}
+
+.social-container {
+    gap: var(--gap-xl);
+}
+
+.nav {
+    position: relative;
+    left: 0;
+    transition: var(--transition-time);
+}
+
+.nav:hover {
+    left: 4px;
+}
+
+.social{
+    position: relative;
+    top: 0;
+    transition: var(--transition-time);
+}
+.social:hover {
+    top: -4px;
+}
+
+.main-section {
     margin-right: 150px;
 }
 
-.description{
+.description {
     width: 60%;
 }
 
-.about-me{
+.about-me {
     max-width: 700px;
 }
-li{
+
+li {
     list-style-type: none;
     text-decoration: none;
 }
 
-.tag{
-    font-size: 12px;
+.tag {
+    font-size: 10px;
     padding-left: 10px;
     padding-right: 10px;
     border-radius: 40px;
     padding-top: 4px;
     padding-bottom: 4px;
     border: 2px solid #5de4a998;
-    max-width: max-content;
+    max-width: fit-content;
+    margin-bottom: var(--gap-xs);
 }
-.tool{
+
+.tool {
     border: 2px solid #38618C;
 }
-.experience-description{
+
+.experience-description {
     max-width: 700px;
 }
 
+.project {
+    top: 0;
+    padding: var(--gap-md);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition-time);
+}
+
+.project:hover h3 {
+    color: #5DE4A9;
+}
+.project:hover {
+    background-color: rgba(0, 0, 0, 0.171);
+}
+
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-xl);
+}
+
+.coming-soon h3,
+.coming-soon h4 {
+    color: #e2e8f072;
+}
+
+.main-stack {
+    gap: var(--gap-xxxl);
+}

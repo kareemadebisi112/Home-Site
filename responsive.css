@@ -2,8 +2,25 @@
     .column {
         flex-direction: column;
     }
+    .main-container {
+        gap: var(--gap-xxxl);
+    }
+    .tag-container, .social-container{
+        flex-direction: row;
+    }
     .name-section{
         position: relative;
         top: 0;
+        justify-content: space-between;
+        height: auto;
+        max-height: max-content;
+        margin: 0;
+        gap: 30px;
+        .description{
+            width: 100%;
+        }
+        ul{
+            display: none;
+        }
     }
 }
