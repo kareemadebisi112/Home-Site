@@ -35,6 +35,7 @@ cpp = fh.Div('C++', cls='tag row')
 csharp = fh.Div('C#', cls='tag row')
 unity = fh.Div('Unity', cls='tag tool row')
 salesforce = fh.Div('Salesforce', cls='tag tool row')
+react = fh.Div('React', cls='tag tool row')
 
 about_me = fh.P('''Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys 
                 standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only 
@@ -178,14 +179,14 @@ def get(): return fh.Html(*all_headers,
                                                 fh.H3('Salesforce Engineer - Pivital'),
                                                 fh.H4('Dec 2021 Contract'),
                                                 pivial_description,                                            
-                                                fh.Div(html,python,js,sql,django, cls='column tag-container'),
+                                                fh.Div(js,sql,react,salesforce, cls='column tag-container'),
                                                 cls='project'
                                             ),
                                             fh.Div(
                                                 fh.H3('Software Engineer - Ascellon Corporation'),
                                                 fh.H4('Jun 2014 - Jun 2021'),
                                                 ascellon_description,                                            
-                                                fh.Div(html,python,js,sql,django, cls='column tag-container'),
+                                                fh.Div(cpp,html,js,salesforce, cls='column tag-container'),
                                                 cls='project'
                                             ),
                                         cls='row project-container')                                    
