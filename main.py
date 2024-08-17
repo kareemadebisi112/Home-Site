@@ -2,12 +2,13 @@
 
 from fasthtml import common as fh
 
+title = [fh.Title('Kareem Adebisi')]
 favicon = [fh.Link(rel='icon', href='home_site_logo.png', type='image/x-icon')]
 viewport = [fh.Meta(name='viewport', content='width=device-width, initial-scale=1.0')]
 css = [fh.Link(rel='stylesheet', href='style.css', type='text/css')]
 responsivecss = [fh.Link(rel='stylesheet', href='responsive.css', type='text/css')]
 bootstrap_icons = [fh.Link(rel='stylesheet', href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css')]
-all_headers = css+bootstrap_icons+responsivecss+favicon+viewport
+all_headers = css+bootstrap_icons+responsivecss+favicon+viewport+title
 
 
 app,rt = fh.fast_app()
