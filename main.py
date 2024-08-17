@@ -197,7 +197,7 @@ def get(): return fh.Html(*all_headers,
                                     fh.Div(
                                         fh.H2('Contact Me'),
                                         fh.Div(
-                                            frm,
+                                            fh.A('Email Me',href='mailto:kareem.s.adebisi@gmail.com',cls='contact-button'),
                                         ),
                                     cls='row', id='contact'),
                                 cls='stack main-stack'),

@@ -1,8 +1,8 @@
-@media screen and (min-width: 1200px) and (max-width: 1600px) {
+@media screen and (min-width: 1030px) and (max-width: 1600px) {
 }
 
 /* Mobile :480px. */
-@media screen and (max-width: 950px) {
+@media screen and (max-width: 1029px) {
     .column {
         flex-direction: column;
     }
