@@ -136,14 +136,14 @@ def get(): return fh.Html(*all_headers,
                                             fh.A(fh.Div(
                                                 fh.H3("The Daily Plank - The Daily Ed, Edd, n' Eddy Guessing Game"),
                                                 fh.H4('2024'),
-                                                fh.P('This is a description of the project',cls='project-description'),
+                                                fh.P("Daily Plank is a daily puzzle game for Ed, Edd n' Eddy fans and anyone looking for a challenge!",cls='project-description'),
                                                 fh.Div(html,python,django,htmx, cls='column tag-container'),
                                                 cls='project'
                                             ),href='https://www.daily-plank.com/'),
                                             fh.A(fh.Div(
-                                                fh.H3('Massive Prompts - Use AI to Get Ahead at Work'),
+                                                fh.H3('Massive Prompts - Make AI your partner in success'),
                                                 fh.H4('2024'),
-                                                fh.P('This is a description of the project',cls='project-description'),
+                                                fh.P('Over 500 high quality AI prompts curated to help you get the most from AI',cls='project-description'),
                                                 fh.Div(html,python,js,django,htmx, cls='column tag-container'),                                                
                                                 cls='project'
                                             ),href='https://www.massive-prompts.com/'),
