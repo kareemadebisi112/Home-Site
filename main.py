@@ -140,13 +140,13 @@ def get(): return fh.Html(*all_headers,
                                                 fh.Div(html,python,django,htmx, cls='column tag-container'),
                                                 cls='project'
                                             ),href='https://www.daily-plank.com/'),
-                                            fh.Div(
+                                            fh.A(fh.Div(
                                                 fh.H3('Massive Prompts - Use AI to Get Ahead at Work'),
                                                 fh.H4('2024'),
                                                 fh.P('This is a description of the project',cls='project-description'),
-                                                fh.Div(html,python,js,django, cls='column tag-container'),                                                
+                                                fh.Div(html,python,js,django,htmx, cls='column tag-container'),                                                
                                                 cls='project'
-                                            ),
+                                            ),href='https://www.massive-prompts.com/'),
                                             fh.Div(
                                                 fh.H3('Grant Propel - Find Grants for Your Business'),
                                                 fh.H4('Coming Soon'),
